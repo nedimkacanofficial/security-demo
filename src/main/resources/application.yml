@@ -1,0 +1,29 @@
+# Server configuration
+server:
+  port: 8080
+
+# Logging configuration
+logging:
+  level:
+    root: info
+
+# Database Configuration
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/security
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+
+# Swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /security-ui.html
